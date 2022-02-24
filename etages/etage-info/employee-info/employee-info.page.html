@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title id="title" class="header">Employee {{employeeInfoDetail.id}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header class="header"> all  :</ion-header>
+  <ion-list>
+    <ion-item class="item" *ngFor="let emp of employee"
+    [routerLink]="['/etages', emp.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="emp.image"></ion-img>
+      </ion-avatar>
+      <ion-label>{{emp.id}} Employee : {{emp.nom}} {{emp.prenom}} </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
